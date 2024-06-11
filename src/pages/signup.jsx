@@ -6,7 +6,8 @@ export function Signup(){
     return (
         <div className="signupclass">
             <div className="signup-tittle">
-                <h1>Inscrever-se em uma conta grátis do iSpotify ®</h1>
+                <h1>Inscrever-se em uma conta grátis do iSpotify</h1>
+                <p>®</p>
             </div>
             <form>
                 <input placeholder="Email"></input>

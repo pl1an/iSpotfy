@@ -27,6 +27,9 @@ h1, p {
     margin-left: 4px;
     font-size: 27pt;
     font-weight: bolder;
+    position: relative;
+    top: 100px;
+    right: 132px;
 }
 
 .signupclass > h2{
