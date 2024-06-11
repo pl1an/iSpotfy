@@ -1,0 +1,72 @@
+.loginclass{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #111111;
+}
+
+h1, p, h2{
+    color: white;
+}
+
+.tittle{
+    display: flex;   
+}
+.tittle > h1{
+    font-size: 40pt;
+    margin-bottom: 0px;
+}
+.tittle > p {
+    margin-left: 4px;
+    font-size: 27pt;
+    font-weight: bolder;
+}
+
+.loginclass > h2{
+    margin: 10px 0px 30px 0px;
+    font-size: 30pt;
+}
+
+.loginclass > form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.loginclass > form > input{
+    border: 0;
+    background-color: #3c3c3c;
+    margin-bottom: 25px;
+    width: 400px;
+    padding: 8px
+}
+.loginclass > form > button{
+    border: 0;
+    border-radius: 20px;
+    width: 200px;
+    padding: 10px;
+    color: black;
+    font-size: 10pt;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.signup_link{
+    display: flex;
+    align-items: center;
+}
+.signup_link > p{
+    margin-right: 5px;
+    text-transform: uppercase;
+    font-size: 8pt;
+    font-weight: bold;
+}
+.linking_signup{
+    color: white;
+    text-transform: uppercase;
+    font-size: 8pt;
+    font-weight: bold;
+}
+
