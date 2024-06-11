@@ -1,4 +1,4 @@
-.loginclass{
+.signupclass {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -8,34 +8,38 @@
     background-color: #111111;
 }
 
-h1, p, h2{
+h1, p {
     color: white;
 }
 
-.tittle{
-    display: flex;   
+.signup-tittle{
+    display: flex;
+    max-width: 450px;  
+    text-align: center; 
+    margin-bottom: 20px;
 }
-.tittle > h1{
-    font-size: 40pt;
+.signup-tittle > h1{
+    font-size: 35pt;
     margin-bottom: 0px;
+    line-height: 52px;
 }
-.tittle > p {
+.signup-tittle > p {
     margin-left: 4px;
     font-size: 27pt;
     font-weight: bolder;
 }
 
-.loginclass > h2{
+.signupclass > h2{
     margin: 10px 0px 30px 0px;
     font-size: 30pt;
 }
 
-.loginclass > form {
+.signupclass > form {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.loginclass > form > input{
+.signupclass > form > input{
     border: 0;
     background-color: #3c3c3c;
     margin-bottom: 25px;
@@ -43,36 +47,34 @@ h1, p, h2{
     padding: 8px;
     color: white;
 }
-.loginclass > form > button{
+.signupclass > form > button{
     border: 0;
     border-radius: 20px;
     width: 200px;
     padding: 10px;
-    color: black;
+    color: white;
     font-size: 8pt;
     font-weight: bold;
     margin-bottom: 10px;
     cursor: pointer;
+    background-color: rgb(91, 212, 91);
     text-transform: uppercase;
 }
-.loginclass > form > button:hover {
-    background-color: #bbb;
+.signupclass > form > button:hover {
+    background-color: rgb(49, 133, 49);
 }
 
-.signup_link{
+.login_link{
     display: flex;
     align-items: center;
 }
-.signup_link > p{
+.login_link > p{
     margin-right: 5px;
-    text-transform: uppercase;
-    font-size: 8pt;
-    font-weight: bold;
+    font-size: 11pt;
 }
-.linking_signup{
+.linking_login {
     color: white;
     text-transform: uppercase;
     font-size: 8pt;
     font-weight: bold;
 }
-
