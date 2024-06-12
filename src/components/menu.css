@@ -35,9 +35,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.0rem;
+    font-size: 1.4rem;
     height: 30px;
     width: 100%;
+    color: rgb(199, 199, 199);
+    text-decoration: none;
 }
 .logout-btn:hover {
     background-color: rgb(37, 37, 37);
@@ -47,7 +49,4 @@
     display: flex;
     align-items: end;
     justify-content: center;
-}
-.menu h2 {
-    color: rgb(199, 199, 199);
 }

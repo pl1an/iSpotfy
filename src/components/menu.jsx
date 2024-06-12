@@ -13,9 +13,7 @@ const Menu = () => {
         <Link to={"/likedmusics"} className='menu-btn'>Músicas Curtidas</Link>
         <Link to={"/account"} className='menu-btn'>Minha Conta</Link>
         <div className='logout'>
-            <button className='logout-btn'>
-                <h2>Logout</h2>
-            </button>
+          <Link to={"/login"} className='logout-btn'>Logout</Link>
         </div>
     </div>
   )

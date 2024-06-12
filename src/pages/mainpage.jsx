@@ -7,7 +7,9 @@ const Mainpage = () => {
   return (
     <div className='main-page'>
         <Menu />
-        <Link to={"/login"}>link temporário para o login</Link>
+        <div className='main-page-right'>
+          Welcome page
+        </div>
     </div>
   )
 }
