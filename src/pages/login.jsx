@@ -1,5 +1,6 @@
 import './styles/login.css'
 import { Link } from "react-router-dom";
+import './styles/signup.css';
 
 export function Login(){
     return (
@@ -10,8 +11,14 @@ export function Login(){
         </div>
         <h2>Música para todos.</h2>
         <form>
-            <input placeholder="Email"></input>
-            <input placeholder="Senha"></input>
+            <div className="input-container">
+                    <input placeholder="Email" />
+                    <span className="material-icons icon">mail</span>
+                </div>
+            <div className="input-container">
+                    <input placeholder="Senha" />
+                    <span className="material-icons icon">lock</span>
+                </div>
             <button type="submit">Entrar</button>
         </form>
         <div className="signup_link">
