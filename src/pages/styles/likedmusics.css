@@ -1,0 +1,9 @@
+.liked-musics {
+    display: flex;
+}
+.liked-musics-right {
+    font-size: 4.0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

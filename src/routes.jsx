@@ -5,6 +5,9 @@ import {Login} from "./pages/login"
 import App from "./App";
 import { Signup } from "./pages/signup";
 import Mainpage from "./pages/mainpage";
+import Artists from "./pages/artists";
+import Likedmusics from "./pages/likedmusics";
+import Account from "./pages/account";
 
 const Routes = () =>{
     return([
@@ -23,6 +26,18 @@ const Routes = () =>{
         {
             path:"mainpage",
             element: <Mainpage></Mainpage>
+        },
+        {
+            path:"artists",
+            element: <Artists></Artists>
+        },
+        {
+            path:"likedmusics",
+            element: <Likedmusics></Likedmusics>
+        },
+        {
+            path:"account",
+            element: <Account></Account>
         }
     ])
 }

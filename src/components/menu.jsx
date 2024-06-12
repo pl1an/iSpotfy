@@ -1,5 +1,6 @@
 import React from 'react'
 import "../components/menu.css"
+import { Link } from 'react-router-dom'
 
 const Menu = () => {
   return (
@@ -8,15 +9,9 @@ const Menu = () => {
             <h1>iSpotify</h1>
             <p>®</p>
         </div>
-        <button className='menu-btn'>
-            <h2>Artistas</h2>
-        </button>
-        <button className='menu-btn'>
-            <h2>Músicas Curtidas</h2>
-        </button>
-        <button className='menu-btn'>
-            <h2>Minha Conta</h2>
-        </button>
+        <Link to={"/artists"} className='menu-btn'>Artistas</Link>
+        <Link to={"/likedmusics"} className='menu-btn'>Músicas Curtidas</Link>
+        <Link to={"/account"} className='menu-btn'>Minha Conta</Link>
         <div className='logout'>
             <button className='logout-btn'>
                 <h2>Logout</h2>
