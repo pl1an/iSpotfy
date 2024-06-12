@@ -1,3 +1,5 @@
+/* styles/signup.css */
+
 .signupclass {
     width: 100%;
     height: 100vh;
@@ -12,17 +14,19 @@ h1, p {
     color: white;
 }
 
-.signup-tittle{
+.signup-tittle {
     display: flex;
-    max-width: 450px;  
-    text-align: center; 
+    max-width: 450px;
+    text-align: center;
     margin-bottom: 20px;
 }
-.signup-tittle > h1{
+
+.signup-tittle > h1 {
     font-size: 35pt;
     margin-bottom: 0px;
     line-height: 52px;
 }
+
 .signup-tittle > p {
     margin-left: 4px;
     font-size: 27pt;
@@ -32,7 +36,7 @@ h1, p {
     right: 132px;
 }
 
-.signupclass > h2{
+.signupclass > h2 {
     margin: 10px 0px 30px 0px;
     font-size: 30pt;
 }
@@ -42,15 +46,32 @@ h1, p {
     flex-direction: column;
     align-items: center;
 }
-.signupclass > form > input{
+
+.signupclass > form > .input-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.signupclass > form > .input-container > input {
     border: 0;
     background-color: #3c3c3c;
-    margin-bottom: 25px;
     width: 400px;
     padding: 8px;
     color: white;
+    padding-right: 2rem; /* Espaço para o ícone */
 }
-.signupclass > form > button{
+
+.signupclass > form > .input-container > .icon {
+    position: absolute;
+    right: 0.5rem;
+    pointer-events: none;
+    color: #3c3c3c; /* Cor do ícone */
+    text-shadow: 1px 1px 0 #d6d0d0, -1px 1px 0 #d6d0d0, 1px -1px 0 #d6d0d0, -1px -1px 0 #d6d0d0; /* Contorno cinza */
+}
+
+.signupclass > form > button {
     border: 0;
     border-radius: 20px;
     width: 200px;
@@ -63,18 +84,21 @@ h1, p {
     background-color: rgb(91, 212, 91);
     text-transform: uppercase;
 }
+
 .signupclass > form > button:hover {
     background-color: rgb(49, 133, 49);
 }
 
-.login_link{
+.login_link {
     display: flex;
     align-items: center;
 }
-.login_link > p{
+
+.login_link > p {
     margin-right: 5px;
     font-size: 11pt;
 }
+
 .linking_login {
     color: white;
     text-transform: uppercase;
