@@ -25,6 +25,7 @@ export function Login(){
             <p>Não tem uma conta?</p>
             <Link to={"/signup"} className='linking_signup'>Inscreva-se</Link>
         </div>
+        <Link to={"/mainpage"} className='linking_signup'>link temporário para a pagina principal</Link>
     </div>
     )
 }

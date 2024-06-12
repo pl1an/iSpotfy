@@ -1,0 +1,49 @@
+.menu {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 25vw;
+    max-width: 200px;
+}
+.menu-title {
+    display: flex;
+    justify-content: center;
+    font-size: 1.3rem;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.menu-btn {
+    background-color: black;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.0rem;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu-btn:hover {
+    background-color: rgb(37, 37, 37);
+}
+.logout-btn {
+    background-color: black;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.0rem;
+    height: 30px;
+    width: 100%;
+}
+.logout-btn:hover {
+    background-color: rgb(37, 37, 37);
+}
+.logout {
+    height: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
