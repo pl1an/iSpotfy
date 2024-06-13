@@ -10,17 +10,17 @@ const Menu = () => {
         <p>®</p>
       </div>
       <Link to={"/artists"} className='menu-btn'>
-        <span className="material-icons icon">trip_origin</span> Artistas
+        <span className="material-icons icon menu-icon">trip_origin</span> Artistas
       </Link>
       <Link to={"/likedmusics"} className='menu-btn'>
-        <span className="material-icons icon">favorite</span> Músicas Curtidas
+        <span className="material-icons icon menu-icon">favorite</span> Músicas Curtidas
       </Link>
       <Link to={"/account"} className='menu-btn'>
-        <span className="material-icons icon">account_circle</span> Minha Conta
+        <span className="material-icons icon menu-icon">account_circle</span> Minha Conta
       </Link>
       <div className='logout'>
         <Link to={"/login"} className='logout-btn'>
-          <span className="material-icons icon">logout</span> Logout
+          <span className="material-icons icon menu-icon">logout</span> Logout
         </Link>
       </div>
     </div>

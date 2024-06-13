@@ -50,3 +50,8 @@
     align-items: end;
     justify-content: center;
 }
+
+.menu-icon {
+    font-size: 1.6rem;
+    margin-right: 5px;
+}
