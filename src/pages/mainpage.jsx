@@ -8,7 +8,7 @@ const Mainpage = () => {
     <div className='main-page'>
         <Menu />
         <div className='main-page-right'>
-          Welcome page
+          <h1>Welcome Page</h1>
         </div>
     </div>
   )
