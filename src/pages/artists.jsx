@@ -7,7 +7,10 @@ const Artists = () => {
     <div className='artists'>
         <Menu />
         <div className='artists-right'>
-            Artistas
+            <h1>Artistas</h1>
+            <div className='artists-container'>
+            
+            </div>
         </div>
     </div>
   )

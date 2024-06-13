@@ -7,7 +7,7 @@ const Likedmusics = () => {
     <div className='liked-musics'>
         <Menu />
         <div className='liked-musics-right'>
-            Músicas Curtidas
+            <h1>Músicas Curtidas</h1>
         </div>
     </div>
   )
