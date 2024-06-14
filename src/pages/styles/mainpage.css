@@ -2,6 +2,8 @@
     display: flex;
 }
 .main-page-right {
+    flex: 1;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -59,6 +61,9 @@
     width: 86%;
     height: 40px;
     margin-top: 75px;
+    display: flex;
+    align-items: center;
+    gap: 10px; 
 }
 .play-btn {
     width: 40px;
@@ -74,14 +79,60 @@
 
 
 
+/* styles/mainpage.css */
 
+.play-btn {
+    border: none;
+    background-color: #1DB954;
+    color: rgb(33, 59, 94);
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
 
+.play-btn .material-icons {
+    font-size: 30px;
+    margin-left: 0px;
+}
 
+.play-btn:hover {
+    background-color: #1ed760;
+}
 
+.icon-btn {
+    border: none;
+    background: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
 
+.icon-btn .material-icons-outlined {
+    font-size: 27px;
+    margin-right: -15px;
+}
 
+.icon-btn .material-symbols-outlined {
+    font-size: 26px;
+    margin-right: -15px;
+}
+.icon-btn:hover .material-icons-outlined {
+    color: #1DB954;
+}
 
+.playlist-bottom {
+    margin-top: 20px;
+    color: white;
+}
 
+.icon-btn:hover .material-symbols-outlined {
+    color: #1DB954;
+}
 
 
 

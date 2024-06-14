@@ -1,8 +1,7 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import Menu from '../components/menu'
-import "./styles/mainpage.css"
-
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Menu from '../components/menu';
+import "./styles/mainpage.css";
 const Mainpage = () => {
   return (
     <div className='main-page'>
@@ -10,7 +9,7 @@ const Mainpage = () => {
       <div className='main-page-right'>
         <div className='playlist-top'>
           <div className='img-container'>
-            <img src="\src\assets\fotoexemplo.jpeg" alt="capa-album" className='img-playlist'/>
+            <img src="\src\assets\fotoexemplo.jpeg" alt="capa-album" className='img-playlist' />
           </div>
           <div className='playlist-title'>
             <p>Playlist</p>
@@ -24,16 +23,26 @@ const Mainpage = () => {
         </div>
 
         <div className='playlist-middle'>
-          <button className='play-btn'></button>
+          <button className='play-btn'>
+            <span className="material-icons">play_arrow</span>
+          </button>
+          <button className='icon-btn'>
+            <span class="material-symbols-outlined">favorite</span>
+          </button>
+          <button className='icon-btn'>
+            <span className="material-icons-outlined">download_for_offline</span>
+          </button>
+          <button className='icon-btn'>
+            <span className="material-symbols-outlined">more_horiz</span>
+          </button>
         </div>
 
         <div className='playlist-bottom'>
           <h1>parte de baixo</h1>
         </div>
-
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Mainpage
+export default Mainpage;
