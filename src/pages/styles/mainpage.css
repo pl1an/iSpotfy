@@ -29,7 +29,7 @@
     margin-top: 80px;
 }
 .playlist-title p {
-    font-size: 1.3rem;
+    font-size: 0.8rem;
     margin: 0;
     margin-top: 6px;
     letter-spacing: 1px;
@@ -37,7 +37,7 @@
 .playlist-title h1 {
     margin: 0;
     margin-top: 6px;
-    font-size: 4rem;
+    font-size: 2.6rem;
     letter-spacing: 1px;
 }
 .playlist-title-bottom {
@@ -46,7 +46,7 @@
 .playlist-title-bottom h2 {
     color: #8d93a3;
     margin: 7px 0 0 10px;
-    font-size: 1.3rem;
+    font-size: 0.8rem;
 }
 .img-playlist {
     width: 100%;
