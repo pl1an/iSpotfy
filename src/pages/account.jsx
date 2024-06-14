@@ -23,15 +23,17 @@ const Account = () => {
             <button type="submit">Trocar Senha</button>
         </div>
         {isEmailFormVisible && (
-          <div className='new-email'>
-            <h1>Novo E-mail</h1>
-            <div className="input-container">
-                <input placeholder="Email" />
-                <span className="material-icons icon">mail</span>
-            </div>
-            <div className="button-container">
-              <button type='button' className='cancel-button' onClick={() => setEmailFormVisible(false)}>Cancelar</button>
-              <button type='button' className='confirm-button'>Confirmar</button>
+          <div className='screen-onclick'>
+            <div className='new-email'>
+              <h1>Novo E-mail</h1>
+              <div className="input-container">
+                  <input placeholder="Email" />
+                  <span className="material-icons icon">mail</span>
+              </div>
+              <div className="button-container">
+                <button type='button' className='cancel-button' onClick={() => setEmailFormVisible(false)}>Cancelar</button>
+                <button type='button' className='confirm-button'>Confirmar</button>
+              </div>
             </div>
           </div>
         )}
