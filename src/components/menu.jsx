@@ -22,7 +22,7 @@ const Menu = () => {
         <span className="material-icons icon menu-icon">account_circle</span> Minha Conta
       </Link>
       <div className='logout'>
-        <Link to={"/login"} className='logout-btn'>
+        <Link to={"/"} className='logout-btn'>
           <span className="material-icons icon menu-icon">logout</span> Logout
         </Link>
       </div>
