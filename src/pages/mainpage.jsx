@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Menu from '../components/menu';
 import "./styles/mainpage.css";
+import Music from '../components/music';
+
 const Mainpage = () => {
   return (
     <div className='main-page'>
@@ -38,8 +40,15 @@ const Mainpage = () => {
         </div>
 
         <div className='playlist-bottom'>
-          <h1>parte de baixo</h1>
+          <div className='playlist-bottom-title'>
+            <h1>#título</h1>
+            <h2>álbum</h2>
+            <span className='class-temporaria'></span>
+          </div>
+          <Music index="1" name="The Zephyr Song" singer="Red Hot Chilli Pepers" album="By The Way"/>
+          <Music index="2" name="Talk" singer="Coldplay" album="X&Y"/>
         </div>
+    
       </div>
     </div>
   );

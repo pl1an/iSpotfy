@@ -7,9 +7,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(#17A6E4, #000);
+    background: linear-gradient(#17A6E4, #043a4d, #000);
     width: 100%;
-    height: 100vh;
+    height: 100%;
     margin-left: 200px;
 }
 
@@ -73,14 +73,7 @@
     background-color: rgb(91, 212, 91);
     cursor: pointer;
 }
-
-
-
-
-
-
 /* styles/mainpage.css */
-
 .play-btn {
     border: none;
     background-color: #1DB954;
@@ -124,15 +117,80 @@
 .icon-btn:hover .material-icons-outlined {
     color: #1DB954;
 }
-
-.playlist-bottom {
-    margin-top: 20px;
-    color: white;
-}
-
 .icon-btn:hover .material-symbols-outlined {
     color: #1DB954;
 }
+
+
+/* Parte de baixo da playlist */
+
+.playlist-bottom {
+    height: 100%;
+    width: 86%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 45px;
+}
+.playlist-bottom-title {
+    display: flex;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #bbb;
+}
+.playlist-bottom-title h1{
+    font-size: 0.7rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+    margin-left: 8px;
+    color: #bbb;
+    margin-top: 20px;
+    width: 60%;
+}
+.playlist-bottom-title h2{
+    font-size: 0.7rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+    color: #bbb;
+    margin-top: 20px;
+    width: 36%;
+}
+.class-temporaria {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

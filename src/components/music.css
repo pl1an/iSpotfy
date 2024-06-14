@@ -1,0 +1,43 @@
+.music-container {
+    width: 100%;
+    height: 28px;
+    margin-top: 20px;
+    display: flex;
+}
+.index h1 {
+    font-size: 0.7rem;
+    color: #bbb;
+    padding-left: 7px;
+    font-weight: 100;
+}
+.index {
+    width: 1.0%;
+    margin-right: 2.6%;
+}
+.music-title h1 {
+    font-size: 0.7rem;
+    font-weight: 100;
+    color: #bbb;
+    margin: 0;
+    margin-bottom: 2px;
+}
+.music-title h2 {
+    font-size: 0.7rem;
+    font-weight: 100;
+    color: #bbb;
+    margin: 0;
+}
+.music-title {
+    width: 57%;
+}
+.album-title h1 {
+    font-size: 0.7rem;
+    font-weight: 100;
+    color: #bbb;
+    margin: 0;
+    padding-left: 2px;
+}
+.album-title {
+    display: flex;
+    align-items: center;
+}
