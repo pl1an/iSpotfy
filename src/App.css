@@ -1,3 +1,58 @@
-html {
-    font-size: 62.5%;
+
+.welcome-class {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #111111;
+}
+.welcome-class .tittle {
+    display: flex;
+    max-width: 450px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 100px;
+}
+
+.welcome-class .tittle h1{
+    font-size: 100px;
+}
+
+.welcome-class .tittle p{
+    font-size: 50px;
+}
+
+.container {
+    max-width: 500px;
+    padding: 20px;
+    background: #1db954;
+    border-radius: 10px;
+}
+
+.container h{
+    margin-bottom: 20px;
+    font-size: 2.5em;
+}
+.container p{
+    margin-bottom: 40px;
+    font-size: 1.2em;
+}
+.btn {
+    background: #ffffff;
+    color: #1db954;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.btn:hover {
+    background: #000000;
+    color: #ffffff;
 }
