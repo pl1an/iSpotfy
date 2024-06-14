@@ -6,6 +6,7 @@
     flex-direction: column;
     background-color: #111111;
     width: 100%;
+    margin-left: 200px;
     height: 100vh;
 }
 .artists-right h1 {
@@ -19,4 +20,11 @@
     width: 86%;
     margin-left: 8%;
     display: flex;
+}
+
+
+@media (max-width: 800px){
+    .artists-right {
+        margin-left: 25vw;
+    }
 }
