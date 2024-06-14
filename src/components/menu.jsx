@@ -12,6 +12,9 @@ const Menu = () => {
       <Link to={"/artists"} className='menu-btn'>
         <span className="material-icons icon menu-icon">trip_origin</span> Artistas
       </Link>
+      <Link to={"/mainpage"} className='menu-btn'>
+        Playlist diária
+      </Link>
       <Link to={"/likedmusics"} className='menu-btn'>
         <span className="material-icons icon menu-icon">favorite</span> Músicas Curtidas
       </Link>
