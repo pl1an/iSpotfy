@@ -6,7 +6,7 @@ export function Login(){
     return (
     <div className="loginclass">
         <div className="tittle">
-            <h1>iSpotfy</h1>
+            <h1>iSpotify</h1>
             <p>®</p>
         </div>
         <h2>Música para todos.</h2>
