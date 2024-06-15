@@ -61,5 +61,5 @@
     color: rgb(41, 219, 41);
 }
 .welcome-btn:hover {
-    border: rgb(41, 219, 41) solid 1px;
+    border-bottom: rgb(41, 219, 41) solid 1px;
 }
