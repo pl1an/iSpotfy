@@ -33,12 +33,12 @@ const Likedmusics = () => {
             <h2>álbum</h2>
             <span className='class-temporaria-liked'></span>
           </div>
-          <LikedMusic index="1" />
-          <LikedMusic index="2" />
-          <LikedMusic index="3" />
-          <LikedMusic index="4" />
-          <LikedMusic index="5" />
-          <LikedMusic index="6" />
+          <LikedMusic index="1" id="lkdmsc1" />
+          <LikedMusic index="2" id="lkdmsc2" />
+          <LikedMusic index="3" id="lkdmsc3" />
+          <LikedMusic index="4" id="lkdmsc4" />
+          <LikedMusic index="5" id="lkdmsc5" />
+          <LikedMusic index="6" id="lkdmsc6" />
         </div>
     
       </div>
