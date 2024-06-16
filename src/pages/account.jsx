@@ -5,6 +5,7 @@ import "./styles/account.css"
 
 const Account = () => {
   const [isEmailFormVisible, setEmailFormVisible] = useState(false);
+  const [isPasswordFormVisible, setPasswordFormVisible] = useState(false);
 
   return (
     <div className='account'>
@@ -20,7 +21,7 @@ const Account = () => {
                 <span className="material-icons icon">mail</span>
             </div>
             <button type="button" onClick={() => setEmailFormVisible(true)}>Trocar E-mail</button>
-            <button type="submit">Trocar Senha</button>
+            <button type="submit" onClick={() => setPasswordFormVisible(true)}>Trocar Senha</button>
         </div>
         {isEmailFormVisible && (
           <div className='screen-onclick'>
@@ -32,6 +33,29 @@ const Account = () => {
               </div>
               <div className="button-container">
                 <button type='button' className='cancel-button' onClick={() => setEmailFormVisible(false)}>Cancelar</button>
+                <button type='button' className='confirm-button'>Confirmar</button>
+              </div>
+            </div>
+          </div>
+        )}
+        {isPasswordFormVisible && (
+          <div className='screen-onclick'>
+            <div className='new-email'>
+              <h1>Nova Senha</h1>
+              <div className="input-container">
+                  <input placeholder="Senha antiga" />
+                  <span className="material-icons icon">lock</span>
+              </div>
+              <div className="input-container">
+                  <input placeholder="Nova senha" />
+                  <span className="material-icons icon">lock</span>
+              </div>
+              <div className="input-container">
+                  <input placeholder="Confirmar nova senha" />
+                  <span className="material-icons icon">lock</span>
+              </div>
+              <div className="button-container">
+                <button type='button' className='cancel-button' onClick={() => setPasswordFormVisible(false)}>Cancelar</button>
                 <button type='button' className='confirm-button'>Confirmar</button>
               </div>
             </div>
