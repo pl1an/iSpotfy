@@ -1,8 +1,14 @@
 import './styles/login.css'
 import { Link } from "react-router-dom";
 import './styles/signup.css';
+import { useNavigate } from 'react-router-dom'; 
 
 export function Login(){
+    const navigate = useNavigate();
+    function EntrarButton(){
+        navigate('/mainpage');
+    }
+
     return (
     <div className="loginclass">
         <div className="tittle">
@@ -19,13 +25,12 @@ export function Login(){
                     <input placeholder="Senha" />
                     <span className="material-icons icon">lock</span>
                 </div>
-            <button type="submit">Entrar</button>
+            <button type="submit" onClick={EntrarButton}>Entrar</button>
         </form>
         <div className="signup_link">
             <p>Não tem uma conta?</p>
             <Link to={"/signup"} className='linking_signup'>Inscreva-se</Link>
         </div>
-        <Link to={"/mainpage"} className='linking_signup'>link temporário para a pagina principal</Link>
     </div>
     )
 }

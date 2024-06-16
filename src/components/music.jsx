@@ -14,6 +14,11 @@ function Music({ name, singer, album, index }) {
         <div className='album-title'>
             <h1>{album}</h1>
         </div>
+        <div className='music-icons'>
+          <button className='music-btn'>
+            <span class="material-symbols-outlined">favorite</span>
+          </button>
+        </div>
     </div>
   )
 }

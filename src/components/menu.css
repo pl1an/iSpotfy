@@ -11,10 +11,15 @@
     display: flex;
     justify-content: center;
     font-size: 1.0rem;
-    margin-top: 10px;
+    padding-bottom: 10px;
     margin-bottom: 20px;
+    border-bottom: 1px solid white;
+    width: 170px;
+    align-self: center;
 }
 .menu-btn {
+    margin-left: 20px;
+    padding: 10px;
     background-color: black;
     border: none;
     color: rgb(199, 199, 199);
@@ -22,7 +27,7 @@
     font-size: 0.9rem;
     height: 40px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     text-decoration: none;
 }
@@ -50,6 +55,7 @@
     display: flex;
     align-items: end;
     justify-content: center;
+    margin-bottom: 10px;
 }
 
 .menu-icon {

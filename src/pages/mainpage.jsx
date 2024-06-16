@@ -48,7 +48,7 @@ const Mainpage = () => {
           <Music index="1" name="The Zephyr Song" singer="Red Hot Chilli Pepers" album="By The Way"/>
           <Music index="2" name="Talk" singer="Coldplay" album="X&Y"/>
         </div>
-    
+
       </div>
     </div>
   );

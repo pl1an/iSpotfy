@@ -1,4 +1,6 @@
 
+
+
 .welcome-class {
     width: 100%;
     height: 100vh;
@@ -8,10 +10,14 @@
     background-color: #111111;
 }
 .welcome-img {
-    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 375px;
 }
 .welcome-image {
-    width: 100%;
+    width: 60%;
 }
 .welcome-title {
     display: flex;
@@ -49,8 +55,8 @@
 }
 .welcome-btn {
     text-decoration: none;
-    color: white;
     width: 300px;
+    border: 1px solid #111111;
     display: flex;
     justify-content: center;
     align-items: center;
