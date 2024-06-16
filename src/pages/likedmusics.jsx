@@ -33,7 +33,12 @@ const Likedmusics = () => {
             <h2>álbum</h2>
             <span className='class-temporaria-liked'></span>
           </div>
-          <LikedMusic index="1" name="The Zephyr Song" singer="Red Hot Chilli Pepers" album="By The Way"/>
+          <LikedMusic index="1" />
+          <LikedMusic index="2" />
+          <LikedMusic index="3" />
+          <LikedMusic index="4" />
+          <LikedMusic index="5" />
+          <LikedMusic index="6" />
         </div>
     
       </div>

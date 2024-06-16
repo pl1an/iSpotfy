@@ -47,6 +47,9 @@ const Mainpage = () => {
           </div>
           <Music index="1" name="The Zephyr Song" singer="Red Hot Chilli Pepers" album="By The Way"/>
           <Music index="2" name="Talk" singer="Coldplay" album="X&Y"/>
+          <Music index="3" name="musica 3" singer="cantor 3" album="album 3"/>
+          <Music index="4" name="musica 4" singer="cantor 4" album="album 4"/>
+          <Music index="5" name="musica 5" singer="cantor 5" album="album 5"/>
         </div>
 
       </div>

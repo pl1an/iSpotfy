@@ -1,7 +1,11 @@
 import React from 'react'
 import "./likedmusic.css"
 
-function LikedMusic({ name, singer, album, index }) {
+function LikedMusic({ index }) {
+  let name = localStorage.getItem(`music${index}name`);
+  let singer = localStorage.getItem(`music${index}singer`);
+  let album = localStorage.getItem(`music${index}album`);
+
   return (
     <div className='music-container'>
         <div className='index'>

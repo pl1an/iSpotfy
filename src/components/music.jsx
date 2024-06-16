@@ -1,14 +1,20 @@
 import React from 'react'
 import "./music.css"
 
-function Music({ name, singer, album, index, fav }) {
+function Music({ name, singer, album, index }) {
   
   function LikeBtn() {
     const btn = document.getElementById(index);
     if (btn.classList.contains('fav')) {
       btn.classList.remove('fav');
+      localStorage.removeItem(`music${index}name`);
+      localStorage.removeItem(`music${index}singer`);
+      localStorage.removeItem(`music${index}album`);
     } else {
       btn.classList.add('fav');
+      localStorage.setItem(`music${index}name`, name);
+      localStorage.setItem(`music${index}singer`, singer);
+      localStorage.setItem(`music${index}album`, album);
     }
   }
 
