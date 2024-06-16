@@ -1,7 +1,17 @@
 import React from 'react'
 import "./music.css"
 
-function Music({ name, singer, album, index }) {
+function Music({ name, singer, album, index, fav }) {
+  
+  function LikeBtn() {
+    const btn = document.getElementById(index);
+    if (btn.classList.contains('fav')) {
+      btn.classList.remove('fav');
+    } else {
+      btn.classList.add('fav');
+    }
+  }
+
   return (
     <div className='music-container'>
         <div className='index'>
@@ -15,8 +25,8 @@ function Music({ name, singer, album, index }) {
             <h1>{album}</h1>
         </div>
         <div className='music-icons'>
-          <button className='music-btn'>
-            <span class="material-symbols-outlined">favorite</span>
+          <button className='music-btn' onClick={() => LikeBtn()}>
+            <span class="material-symbols-outlined" id={index}>favorite</span>
           </button>
         </div>
     </div>

@@ -40,6 +40,7 @@
 .album-title {
     display: flex;
     align-items: center;
+    width: 34%;
 }
 
 .music-btn {
@@ -53,4 +54,7 @@
 }
 .music-btn > .material-symbols-outlined{
     font-size: 15pt;
+}
+.fav {
+    color: #1DB954;
 }
