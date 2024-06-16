@@ -10,10 +10,10 @@ const Menu = () => {
         <p>®</p>
       </div>
       <Link to={"/artists"} className='menu-btn'>
-        <span className="material-icons icon menu-icon">trip_origin</span> Artistas
+        <span className="material-icons icon menu-icon ">trip_origin</span> Artistas
       </Link>
       <Link to={"/mainpage"} className='menu-btn'>
-        <span class="material-symbols-outlined ">queue_music</span> Playlist diária
+        <span class="material-symbols-outlined icon">queue_music</span> Playlist diária
       </Link>
       <Link to={"/likedmusics"} className='menu-btn'>
         <span className="material-icons icon menu-icon">favorite</span> Músicas Curtidas
@@ -23,7 +23,7 @@ const Menu = () => {
       </Link>
       <div className='logout'>
         <Link to={"/"} className='logout-btn'>
-          <span className="material-icons icon menu-icon">logout</span> Logout
+          <span className="material-icons menu-icon">logout</span> Logout
         </Link>
       </div>
     </div>
