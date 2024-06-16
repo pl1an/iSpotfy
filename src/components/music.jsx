@@ -1,17 +1,20 @@
 import React from 'react'
 import "./music.css"
+import { useState } from 'react';
 
 function Music({ name, singer, album, index }) {
   
+  const [fav, setFav] = useState("material-symbols-outlined");
+
+
   function LikeBtn() {
-    const btn = document.getElementById(index);
-    if (btn.classList.contains('fav')) {
-      btn.classList.remove('fav');
+    if (fav == "material-symbols-outlined fav") {
+      setFav("material-symbols-outlined");
       localStorage.removeItem(`music${index}name`);
       localStorage.removeItem(`music${index}singer`);
       localStorage.removeItem(`music${index}album`);
     } else {
-      btn.classList.add('fav');
+      setFav("material-symbols-outlined fav");
       localStorage.setItem(`music${index}name`, name);
       localStorage.setItem(`music${index}singer`, singer);
       localStorage.setItem(`music${index}album`, album);
@@ -32,7 +35,7 @@ function Music({ name, singer, album, index }) {
         </div>
         <div className='music-icons'>
           <button className='music-btn' onClick={() => LikeBtn()}>
-            <span class="material-symbols-outlined" id={index}>favorite</span>
+            <span class={fav} id={index}>favorite</span>
           </button>
         </div>
     </div>
