@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useLayoutEffect } from 'react'
 import "./music.css"
 import { useState } from 'react';
 
@@ -20,6 +20,14 @@ function Music({ name, singer, album, index }) {
       localStorage.setItem(`music${index}album`, album);
     }
   }
+
+  useLayoutEffect(() => {
+    if (localStorage.getItem(`music${index}name`)) {
+      setFav("material-symbols-outlined fav");
+    } else {
+      setFav("material-symbols-outlined");
+    }
+  }, []);
 
   return (
     <div className='music-container'>
