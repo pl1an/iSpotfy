@@ -1,7 +1,7 @@
 import React from 'react'
 import Menu from '../components/menu'
 import "./styles/likedmusics.css"
-import Music from '../components/music'
+import LikedMusic from '../components/likedmusic'
 
 const Likedmusics = () => {
   return (
@@ -15,11 +15,6 @@ const Likedmusics = () => {
           <div className='liked-title'>
             <p>Playlist</p>
             <h1>Músicas Curtidas</h1>
-            <p>artista 01, artista 02 e mais</p>
-            <div className='liked-title-bottom'>
-              <p>Spotify - X músicas</p>
-              <h2>2h 23min</h2>
-            </div>
           </div>
         </div>
 
@@ -28,13 +23,7 @@ const Likedmusics = () => {
             <span className="material-icons">play_arrow</span>
           </button>
           <button className='icon-btn'>
-            <span class="material-symbols-outlined">favorite</span>
-          </button>
-          <button className='icon-btn'>
             <span className="material-icons-outlined">download_for_offline</span>
-          </button>
-          <button className='icon-btn'>
-            <span className="material-symbols-outlined">more_horiz</span>
           </button>
         </div>
 
@@ -44,7 +33,7 @@ const Likedmusics = () => {
             <h2>álbum</h2>
             <span className='class-temporaria-liked'></span>
           </div>
-          <Music />
+          <LikedMusic index="1" name="The Zephyr Song" singer="Red Hot Chilli Pepers" album="By The Way"/>
         </div>
     
       </div>
