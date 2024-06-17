@@ -40,4 +40,5 @@
 .album-title {
     display: flex;
     align-items: center;
+    width: 36%;
 }

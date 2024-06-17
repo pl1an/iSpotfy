@@ -14,6 +14,14 @@ function LikedMusic({ index, id }) {
     }
   }, [])
 
+  function TrashButton() {
+    localStorage.removeItem(`music${index}name`);
+    localStorage.removeItem(`music${index}singer`);
+    localStorage.removeItem(`music${index}album`);
+    document.getElementById(id).style.display = 'none';
+  }
+
+
   return (
     <div className='music-container' id={id}>
         <div className='index'>
@@ -27,7 +35,9 @@ function LikedMusic({ index, id }) {
             <h1>{album}</h1>
         </div>
         <div className='music-icons'>
-          
+          <button className='music-btn'>
+            <i className="fa-solid fa-trash-can trash-btn" onClick={() => TrashButton()}></i>
+          </button>
         </div>
     </div>
   )
