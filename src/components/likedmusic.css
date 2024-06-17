@@ -14,21 +14,22 @@
     width: 1.0%;
     margin-right: 2.6%;
 }
-.music-title h1 {
+.musictitle h1 {
     font-size: 0.7rem;
     font-weight: 100;
     color: #bbb;
     margin: 0;
     margin-bottom: 2px;
 }
-.music-title h2 {
+.musictitle h2 {
     font-size: 0.7rem;
     font-weight: 100;
     color: #bbb;
     margin: 0;
 }
-.music-title {
+.musictitle {
     width: 57%;
+    margin: 0;
 }
 .album-title h1 {
     font-size: 0.7rem;

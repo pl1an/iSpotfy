@@ -27,7 +27,7 @@ function LikedMusic({ index, id }) {
         <div className='index'>
             <h1>{index}</h1>
         </div>
-        <div className='music-title'>
+        <div className='musictitle'>
             <h1>{name}</h1>
             <h2>{singer}</h2>
         </div>
