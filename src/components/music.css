@@ -40,7 +40,11 @@
 .album-title {
     display: flex;
     align-items: center;
-    width: 34%;
+    width: 32.9%;
+}
+
+.music-icons{
+    display: flex;
 }
 
 .music-btn {
@@ -54,7 +58,14 @@
 }
 .music-btn > .material-symbols-outlined{
     font-size: 15pt;
+    margin: 0px;
+    padding: 0px;
 }
+
 .fav {
     color: #1DB954;
+}
+
+.trash-icon{
+    font-size: 14pt;
 }

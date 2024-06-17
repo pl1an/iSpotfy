@@ -5,6 +5,7 @@ import { useState } from 'react';
 function Music({ name, singer, album, index }) {
   
   const [fav, setFav] = useState("material-symbols-outlined");
+  const [hide, setHide] = useState(false);
 
 
   function LikeBtn() {
@@ -21,6 +22,16 @@ function Music({ name, singer, album, index }) {
     }
   }
 
+  function TrashBtn() {
+    if (fav == "material-symbols-outlined fav") {
+      setFav("material-symbols-outlined");
+      localStorage.removeItem(`music${index}name`);
+      localStorage.removeItem(`music${index}singer`);
+      localStorage.removeItem(`music${index}album`);
+    }
+    setHide(true);
+  }
+
   useLayoutEffect(() => {
     if (localStorage.getItem(`music${index}name`)) {
       setFav("material-symbols-outlined fav");
@@ -29,7 +40,7 @@ function Music({ name, singer, album, index }) {
     }
   }, []);
 
-  return (
+  return ( !hide && (
     <div className='music-container'>
         <div className='index'>
             <h1>{index}</h1>
@@ -43,11 +54,14 @@ function Music({ name, singer, album, index }) {
         </div>
         <div className='music-icons'>
           <button className='music-btn' onClick={() => LikeBtn()}>
-            <span class={fav} id={index}>favorite</span>
+            <span className={fav} id={index}>favorite</span>
+          </button>
+          <button className='music-btn'>
+            <i className="fa-solid fa-trash-can trash-btn" onClick={() => TrashBtn()}></i>
           </button>
         </div>
     </div>
-  )
+  ))
 }
 
 export default Music

@@ -29,7 +29,7 @@ const Mainpage = () => {
             <span className="material-icons">play_arrow</span>
           </button>
           <button className='icon-btn'>
-            <span class="material-symbols-outlined">favorite</span>
+            <span className="material-symbols-outlined">favorite</span>
           </button>
           <button className='icon-btn'>
             <span className="material-icons-outlined">download_for_offline</span>
