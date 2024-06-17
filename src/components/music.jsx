@@ -23,12 +23,6 @@ function Music({ name, singer, album, index }) {
   }
 
   function TrashBtn() {
-    if (fav == "material-symbols-outlined fav") {
-      setFav("material-symbols-outlined");
-      localStorage.removeItem(`music${index}name`);
-      localStorage.removeItem(`music${index}singer`);
-      localStorage.removeItem(`music${index}album`);
-    }
     setHide(true);
   }
 
