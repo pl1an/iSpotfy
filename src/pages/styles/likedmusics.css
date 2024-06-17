@@ -95,7 +95,12 @@
     border-radius: 10px;
     margin-top: 10px;
 }
-
+.liked-bottom-title span{
+    font-size: 1rem;
+    margin: 0;
+    color: #bbb;
+    margin-top: 20px;
+}   
 
 
 

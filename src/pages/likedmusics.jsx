@@ -31,7 +31,7 @@ const Likedmusics = () => {
           <div className='liked-bottom-title'>
             <h1>#título</h1>
             <h2>álbum</h2>
-            <span className='class-temporaria-liked'></span>
+            <span className="material-symbols-outlined">schedule</span>
           </div>
           <LikedMusic index="1" id="lkdmsc1" />
           <LikedMusic index="2" id="lkdmsc2" />
