@@ -43,7 +43,7 @@ const Mainpage = () => {
           <div className='playlist-bottom-title'>
             <h1>#título</h1>
             <h2>álbum</h2>
-            <span className='class-temporaria'></span>
+            <span className="material-symbols-outlined">schedule</span>
           </div>
           <Music index="1" name="The Zephyr Song" singer="Red Hot Chilli Pepers" album="By The Way"/>
           <Music index="2" name="Talk" singer="Coldplay" album="X&Y"/>

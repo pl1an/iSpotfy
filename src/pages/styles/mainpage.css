@@ -173,3 +173,10 @@ body{
         margin-left: 25vw;
     }
 }
+
+.playlist-bottom-title span{
+    font-size: 1rem;
+    margin: 0;
+    color: #bbb;
+    margin-top: 20px;
+}
