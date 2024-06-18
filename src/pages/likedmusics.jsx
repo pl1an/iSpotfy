@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 import ReactDOM from 'react-dom/client'
 import Menu from '../components/menu'
 import "./styles/likedmusics.css"
-import LikedMusic from '../components/likedmusic'
 import Music from '../components/music'
 
 const Likedmusics = () => {

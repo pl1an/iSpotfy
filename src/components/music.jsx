@@ -2,7 +2,6 @@ import React, { useEffect, useLayoutEffect } from 'react'
 import "./music.css"
 import { useState } from 'react';
 import { set_storage } from './local_storage_handler';
-import Likedmusics from '../pages/likedmusics';
 
 function Music({ name, singer, album, index, favorited, trashed, playlist }) {
   
@@ -12,6 +11,7 @@ function Music({ name, singer, album, index, favorited, trashed, playlist }) {
   let liked_playlist = JSON.parse(localStorage.getItem('likedmusics'));
 
   function LikeBtn() {
+    liked_playlist = JSON.parse(localStorage.getItem('likedmusics'));
     if (fav == "material-symbols-outlined fav") {
       setFav("material-symbols-outlined");
       stored_playlist.at(index-1).fav = false;
@@ -28,6 +28,7 @@ function Music({ name, singer, album, index, favorited, trashed, playlist }) {
   }
 
   function TrashBtn() {
+    liked_playlist = JSON.parse(localStorage.getItem('likedmusics'));
     setHide(true);
     if(playlist=='likedmusics'){
       let origin_playlist = JSON.parse(localStorage.getItem(liked_playlist.at(index-1).playlist));
