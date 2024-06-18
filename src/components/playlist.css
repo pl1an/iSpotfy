@@ -2,9 +2,8 @@ body{
     background-color: black;
 }
 
-.main-page {
+.main-playlist {
     display: flex;
-    flex: 1;
 }
 .main-page-right {
     padding: 20px;

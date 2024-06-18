@@ -7,10 +7,11 @@ function Music({ name, singer, album, index, favorited, trashed, playlist }) {
   
   const [fav, setFav] = useState("material-symbols-outlined");
   const [hide, setHide] = useState(false);
-  const stored_playlist = JSON.parse(localStorage.getItem(playlist));
+  let stored_playlist = JSON.parse(localStorage.getItem(playlist));
   let liked_playlist = JSON.parse(localStorage.getItem('likedmusics'));
 
   function LikeBtn() {
+    stored_playlist = JSON.parse(localStorage.getItem(playlist));
     liked_playlist = JSON.parse(localStorage.getItem('likedmusics'));
     if (fav == "material-symbols-outlined fav") {
       setFav("material-symbols-outlined");
@@ -29,6 +30,7 @@ function Music({ name, singer, album, index, favorited, trashed, playlist }) {
 
   function TrashBtn() {
     liked_playlist = JSON.parse(localStorage.getItem('likedmusics'));
+    stored_playlist = JSON.parse(localStorage.getItem(playlist));
     setHide(true);
     if(playlist=='likedmusics'){
       let origin_playlist = JSON.parse(localStorage.getItem(liked_playlist.at(index-1).playlist));
