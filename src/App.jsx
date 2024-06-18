@@ -4,6 +4,7 @@ import { default_storage, set_storage } from './components/local_storage_handler
 
 function App() {
   set_storage(default_storage(), "dailymix1");
+  localStorage.removeItem('likedmusics');
   
   return (
     <div className='welcome-class'>
