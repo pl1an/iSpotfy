@@ -1,10 +1,28 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import ReactDOM from 'react-dom/client';
 import Menu from '../components/menu';
 import "./styles/mainpage.css";
 import Music from '../components/music';
 
 const Mainpage = () => {
+  function Loadmix(mixname){
+    const rootElement = document.getElementById('songholder');
+    const root = ReactDOM.createRoot(rootElement);
+    var rendered_songs = [];
+    var indexx=0;
+    const load_storage = JSON.parse(localStorage.getItem(mixname));
+    console.log(load_storage, typeof(load_storage));
+    load_storage.forEach(element => {
+      indexx++; 
+      rendered_songs.push(<Music index={indexx.toString()} name={element.name} album={element.album} singer={element.singer} playlist={mixname} trashed={element.trashed} favorited={element.fav}></Music>)
+    });
+    root.render(rendered_songs);
+  }
+
+  useEffect(() => {
+    if(localStorage.getItem('dailymix1')) Loadmix("dailymix1");
+  })
+
   return (
     <div className='main-page'>
       <Menu />
@@ -45,11 +63,8 @@ const Mainpage = () => {
             <h2>álbum</h2>
             <span className="material-symbols-outlined">schedule</span>
           </div>
-          <Music index="1" name="The Zephyr Song" singer="Red Hot Chilli Pepers" album="By The Way"/>
-          <Music index="2" name="Talk" singer="Coldplay" album="X&Y"/>
-          <Music index="3" name="musica 3" singer="cantor 3" album="album 3"/>
-          <Music index="4" name="musica 4" singer="cantor 4" album="album 4"/>
-          <Music index="5" name="musica 5" singer="cantor 5" album="album 5"/>
+          <div id="songholder">
+          </div>
         </div>
 
       </div>

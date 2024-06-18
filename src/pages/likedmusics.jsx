@@ -1,9 +1,29 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import ReactDOM from 'react-dom/client'
 import Menu from '../components/menu'
 import "./styles/likedmusics.css"
 import LikedMusic from '../components/likedmusic'
+import Music from '../components/music'
 
 const Likedmusics = () => {
+  function Loadmix(mixname){
+    const rootElement = document.getElementById('songholder');
+    const root = ReactDOM.createRoot(rootElement);
+    var rendered_songs = [];
+    var indexx=0;
+    const load_storage = JSON.parse(localStorage.getItem(mixname));
+    console.log(load_storage, typeof(load_storage));
+    load_storage.forEach(element => {
+      indexx++; 
+      rendered_songs.push(<Music index={indexx.toString()} name={element.name} album={element.album} singer={element.singer} playlist={mixname} trashed={element.trashed} favorited={element.fav}></Music>)
+    });
+    root.render(rendered_songs);
+  }
+
+  useEffect(() => {
+    if(localStorage.getItem('likedmusics')) Loadmix('likedmusics');
+  })
+
   return (
     <div className='liked-musics'>
       <Menu />
@@ -33,12 +53,9 @@ const Likedmusics = () => {
             <h2>álbum</h2>
             <span className="material-symbols-outlined">schedule</span>
           </div>
-          <LikedMusic index="1" id="lkdmsc1" />
-          <LikedMusic index="2" id="lkdmsc2" />
-          <LikedMusic index="3" id="lkdmsc3" />
-          <LikedMusic index="4" id="lkdmsc4" />
-          <LikedMusic index="5" id="lkdmsc5" />
-          <LikedMusic index="6" id="lkdmsc6" />
+
+        <div id='songholder'></div>
+
         </div>
     
       </div>
