@@ -40,7 +40,7 @@ const Playlist = ({playlistname, localname}) => {
     })
     
     return (
-        <div className='main-page'>
+        <div className='main-playlist'>
           <div className='main-page-right'>
             <div className='playlist-top'>
               <div className='img-container'>
