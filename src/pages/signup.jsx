@@ -36,7 +36,7 @@ export function Signup() {
                     <span className="material-icons icon">mail</span>
                 </div>
                 <div className="input-container">
-                    <input placeholder="Crie uma senha" id="password-input"/>
+                    <input type="password" placeholder="Crie uma senha" id="password-input"/>
                     <span className="material-icons icon">lock</span>
                 </div>
                 <div className="input-container">

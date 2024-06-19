@@ -43,15 +43,15 @@ const Account = () => {
             <div className='new-email'>
               <h1>Nova Senha</h1>
               <div className="input-container">
-                  <input placeholder="Senha antiga" />
+                  <input type='password'  placeholder="Senha antiga" />
                   <span className="material-icons icon">lock</span>
               </div>
               <div className="input-container">
-                  <input placeholder="Nova senha" />
+                  <input type='password' placeholder="Nova senha" />
                   <span className="material-icons icon">lock</span>
               </div>
               <div className="input-container">
-                  <input placeholder="Confirmar nova senha" />
+                  <input type='password' placeholder="Confirmar nova senha" />
                   <span className="material-icons icon">lock</span>
               </div>
               <div className="button-container">

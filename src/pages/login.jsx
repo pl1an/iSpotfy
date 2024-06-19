@@ -35,7 +35,7 @@ export function Login(){
                     <span className="material-icons icon">mail</span>
                 </div>
             <div className="input-container">
-                    <input placeholder="Senha" id="input-password"/>
+                    <input type='password' placeholder="Senha" id="input-password"/>
                     <span className="material-icons icon">lock</span>
                 </div>
             <button type="submit" onClick={EntrarButton}>Entrar</button>
