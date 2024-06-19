@@ -2,11 +2,24 @@ import './styles/login.css'
 import { Link } from "react-router-dom";
 import './styles/signup.css';
 import { useNavigate } from 'react-router-dom'; 
+import api from '../api';
+
 
 export function Login(){
     const navigate = useNavigate();
     function EntrarButton(){
-        navigate('/mainpage');
+        const email = document.getElementById('input-email').value; 
+        const password = document.getElementById('input-password').value;
+
+        api
+            .post('/api/users', {
+                email: {email},
+                password: {password},
+            })
+            .then(() => navigate('/mainpage'))
+            .catch((err) => {
+                console.error("ops! ocorreu um erro" + err);
+            });
     }
 
     return (
@@ -18,11 +31,11 @@ export function Login(){
         <h2>Música para todos.</h2>
         <form>
             <div className="input-container">
-                    <input placeholder="Email" />
+                    <input placeholder="Email" id="input-email"/>
                     <span className="material-icons icon">mail</span>
                 </div>
             <div className="input-container">
-                    <input placeholder="Senha" />
+                    <input placeholder="Senha" id="input-password"/>
                     <span className="material-icons icon">lock</span>
                 </div>
             <button type="submit" onClick={EntrarButton}>Entrar</button>
