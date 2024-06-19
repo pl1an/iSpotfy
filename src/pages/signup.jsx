@@ -1,26 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import './styles/signup.css';
-import api from "../api";
+import { useNavigate } from 'react-router-dom'; 
 
 export function Signup() {
+    const navigate = useNavigate();
 
     function Cadastro() {
         const email = document.getElementById('email-input').value;
         const password = document.getElementById('password-input').value;
         const name = document.getElementById('name-input').value;
 
-        api
-            .post('/api/users/login', {
-                email: {email},
-                name: {name},
-                password: {password},
-                role: 'user'
-            })
-            .then(navigate('/login'))
-            .catch((err) => {
-                console.error("ops! ocorreu um erro" + err);
-            });
+        localStorage.setItem("useremail", email);
+        localStorage.setItem("userpassword", password);
+        localStorage.setItem("username", name);
+
+        navigate('/login');
     }
    
 

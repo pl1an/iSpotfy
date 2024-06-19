@@ -2,24 +2,25 @@ import './styles/login.css'
 import { Link } from "react-router-dom";
 import './styles/signup.css';
 import { useNavigate } from 'react-router-dom'; 
-import api from '../api';
 
 
 export function Login(){
     const navigate = useNavigate();
+
     function EntrarButton(){
         const email = document.getElementById('input-email').value; 
         const password = document.getElementById('input-password').value;
 
-        api
-            .post('/api/users', {
-                email: {email},
-                password: {password},
-            })
-            .then(navigate('/mainpage'))
-            .catch((err) => {
-                console.error("ops! ocorreu um erro" + err);
-            });
+        let useremail = localStorage.getItem('useremail');
+        let userpassword = localStorage.getItem('userpassword');
+
+        if (useremail == email && userpassword == password) {
+            navigate('/mainpage');
+        } else {
+            console.log("login inexistente");
+        }
+
+       
     }
 
     return (
