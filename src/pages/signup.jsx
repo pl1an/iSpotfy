@@ -17,7 +17,7 @@ export function Signup() {
                 password: {password},
                 role: 'user'
             })
-            .then(() => navigate('/login'))
+            .then(navigate('/login'))
             .catch((err) => {
                 console.error("ops! ocorreu um erro" + err);
             });

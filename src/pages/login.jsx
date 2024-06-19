@@ -16,7 +16,7 @@ export function Login(){
                 email: {email},
                 password: {password},
             })
-            .then(() => navigate('/mainpage'))
+            .then(navigate('/mainpage'))
             .catch((err) => {
                 console.error("ops! ocorreu um erro" + err);
             });
