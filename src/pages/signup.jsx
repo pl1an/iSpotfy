@@ -11,6 +11,17 @@ export function Signup() {
         const password = document.getElementById('password-input').value;
         const name = document.getElementById('name-input').value;
 
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email)) {
+            alert("Por favor, insira um e-mail válido.");
+            return;
+    }
+
+        const passwordMinLength = 6;
+        if (password.length < passwordMinLength) {
+            alert(`A senha deve ter pelo menos ${passwordMinLength} caracteres.`);
+            return;
+    }
         localStorage.setItem("useremail", email);
         localStorage.setItem("userpassword", password);
         localStorage.setItem("username", name);
