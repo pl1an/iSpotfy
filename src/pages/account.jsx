@@ -6,6 +6,18 @@ import "./styles/account.css"
 const Account = () => {
   const [isEmailFormVisible, setEmailFormVisible] = useState(false);
   const [isPasswordFormVisible, setPasswordFormVisible] = useState(false);
+  
+  function verificarEmail() {
+    const email = document.getElementById('email-input').value;
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+        alert("Por favor, insira um e-mail válido.");
+    } else {
+        alert("E-mail válido! Redirecionando...");
+        window.history.back();
+    }
+}
 
   return (
     <div className='account'>
@@ -28,12 +40,12 @@ const Account = () => {
             <div className='new-email'>
               <h1>Novo E-mail</h1>
               <div className="input-container">
-                  <input placeholder="Email" />
+                  <input id="email-input" placeholder="Email" />
                   <span className="material-icons icon">mail</span>
               </div>
               <div className="button-container">
                 <button type='button' className='cancel-button' onClick={() => setEmailFormVisible(false)}>Cancelar</button>
-                <button type='button' className='confirm-button'>Confirmar</button>
+                <button type='button' className='confirm-button' onClick={() => verificarEmail()}>Confirmar</button>
               </div>
             </div>
           </div>
