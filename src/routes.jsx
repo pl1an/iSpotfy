@@ -8,6 +8,7 @@ import Mainpage from "./pages/mainpage";
 import Artists from "./pages/artists";
 import Likedmusics from "./pages/likedmusics";
 import Account from "./pages/account";
+import Artistmusics from "./pages/artistmusics";
 
 const Routes = () =>{
     return([
@@ -38,6 +39,10 @@ const Routes = () =>{
         {
             path:"account",
             element: <Account></Account>
+        },
+        {
+            path:"artists/:id",
+            element: <Artistmusics></Artistmusics>
         }
     ])
 }

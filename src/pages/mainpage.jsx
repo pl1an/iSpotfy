@@ -8,9 +8,10 @@ const Mainpage = () => {
   return (
     <div className='main-page'>
       <Menu />
-      <Playlist playlistname={"Daily Mix 1"} localname={"dailymix1"} className='main-page'/>
+      <Playlist playlistname={"Daily Mix 1"} localname={"dailymix1"} className='main-page' img="\src\assets\fotoexemplo.jpeg"/>
     </div>
   );
 };
 
 export default Mainpage;
+

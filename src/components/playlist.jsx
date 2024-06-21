@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import Music from '../components/music';
 import "../components/playlist.css"
 
-const Playlist = ({playlistname, localname}) => {
+const Playlist = ({ playlistname, localname, img }) => {
     const [participant_artists, setArtists] = useState("");
     const [songnumber, setSongNumber] = useState(0);
 
@@ -44,7 +44,7 @@ const Playlist = ({playlistname, localname}) => {
           <div className='main-page-right'>
             <div className='playlist-top'>
               <div className='img-container'>
-                <img src="\src\assets\fotoexemplo.jpeg" alt="capa-album" className='img-playlist' />
+                <img src={img} alt="capa-album" className='img-playlist' />
               </div>
               <div className='playlist-title'>
                 <p>Playlist</p>
