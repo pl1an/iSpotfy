@@ -38,7 +38,8 @@ body{
     font-size: 0.8rem;
     margin: 0;
     margin-top: 6px;
-    letter-spacing: 1px;
+    letter-spacing: 0px;
+    font-weight: 600;
 }
 .playlist-title h1 {
     margin: 0;
@@ -134,6 +135,8 @@ body{
     display: flex;
     flex-direction: column;
     margin-top: 45px;
+    font-weight: 900;
+    
 }
 .playlist-bottom-title {
     display: flex;

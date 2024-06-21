@@ -6,9 +6,9 @@
 }
 .index h1 {
     font-size: 0.7rem;
-    color: #bbb;
+    color: white;
     padding-left: 7px;
-    font-weight: 100;
+    font-weight: 300;
 }
 .index {
     width: 1.0%;
@@ -16,15 +16,15 @@
 }
 .music-title h1 {
     font-size: 0.7rem;
-    font-weight: 100;
-    color: #bbb;
+    font-weight: 300;
+    color: white;
     margin: 0;
     margin-bottom: 2px;
 }
 .music-title h2 {
     font-size: 0.7rem;
-    font-weight: 100;
-    color: #bbb;
+    font-weight: 300;
+    color: white;
     margin: 0;
 }
 .music-title {
@@ -32,8 +32,8 @@
 }
 .album-title h1 {
     font-size: 0.7rem;
-    font-weight: 100;
-    color: #bbb;
+    font-weight: 300;
+    color: white;
     margin: 0;
     padding-left: 2px;
 }

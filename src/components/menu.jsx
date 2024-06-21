@@ -12,7 +12,7 @@ const Menu = () => {
       <Link to={"/artists"} className='menu-btn'>
         <span className="material-icons icon menu-icon ">trip_origin</span> Artistas
       </Link>
-      <Link to={"/mainpage"} className='menu-btn'>
+      <Link to={"/mainpage"} className='menu-btn queue-music'>
         <span className="material-symbols-outlined icon">queue_music</span> Playlist diária
       </Link>
       <Link to={"/likedmusics"} className='menu-btn'>

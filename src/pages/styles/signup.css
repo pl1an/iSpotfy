@@ -22,17 +22,18 @@ h1, p {
 }
 
 .signup-tittle > h1 {
-    font-size: 35pt;
-    margin-bottom: 0px;
+    font-size: 28pt;
+    margin-bottom: 20px;
     line-height: 52px;
+    font-weight: 600;
 }
 
 .signup-tittle > p {
     margin-left: 4px;
-    font-size: 27pt;
-    font-weight: bolder;
+    font-size: 23pt;
+    font-weight: 700;
     position: relative;
-    top: 100px;
+    top: 99px;
     right: 132px;
 }
 
