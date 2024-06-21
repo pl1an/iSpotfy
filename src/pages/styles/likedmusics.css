@@ -66,6 +66,8 @@
     display: flex;
     padding-bottom: 5px;
     border-bottom: 1px solid #bbb;
+    margin-top: 3px;
+    margin-left: -1px;
 }
 .liked-bottom-title h1{
     font-size: 0.7rem;
@@ -74,9 +76,10 @@
     letter-spacing: 1px;
     margin: 0;
     margin-left: 8px;
-    color: #bbb;
-    margin-top: 20px;
+    color: white;
+    margin-top: 17px;
     width: 60%;
+    margin-bottom: 7px;
 }
 .liked-bottom-title h2{
     font-size: 0.7rem;
@@ -84,7 +87,7 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     margin: 0;
-    color: #bbb;
+    color: white;
     margin-top: 20px;
     width: 36%;
 }
@@ -98,7 +101,7 @@
 .liked-bottom-title span{
     font-size: 1rem;
     margin: 0;
-    color: #bbb;
+    color: white;
     margin-top: 20px;
 }   
 
