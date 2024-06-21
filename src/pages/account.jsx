@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useLayoutEffect, useState } from 'react';
 import Menu from '../components/menu'
 import "./styles/account.css"
 
@@ -6,6 +6,13 @@ import "./styles/account.css"
 const Account = () => {
   const [isEmailFormVisible, setEmailFormVisible] = useState(false);
   const [isPasswordFormVisible, setPasswordFormVisible] = useState(false);
+
+  let emailatual;
+  let nomeatual;
+
+  
+  emailatual = localStorage.getItem("useremail");
+  nomeatual = localStorage.getItem("username");
   
   function verificarEmail() {
     const email = document.getElementById('email-input').value;
@@ -15,7 +22,8 @@ const Account = () => {
         alert("Por favor, insira um e-mail válido.");
     } else {
         alert("E-mail válido! Redirecionando...");
-        window.history.back();
+        setEmailFormVisible(false);
+        localStorage.setItem('useremail', email);
     }
 }
 
@@ -25,11 +33,11 @@ const Account = () => {
         <div className='account-right'>
             <h1>Minha Conta</h1>
             <div className="input-container">
-              <h2 className='name-account'>Nome</h2>
+              <h2 className='name-account'>{nomeatual}</h2>
               <span className="material-icons icon">account_circle</span>
             </div>
             <div className="input-container">
-                <h2 className='email-account'>Email</h2>
+                <h2 className='email-account'>{emailatual}</h2>
                 <span className="material-icons icon">mail</span>
             </div>
             <button type="button" onClick={() => setEmailFormVisible(true)}>Trocar E-mail</button>

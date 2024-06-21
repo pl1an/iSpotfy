@@ -36,6 +36,8 @@
     font-size: 1.0rem;
     margin: 0;
     padding-left: 10px;
+    font-weight: 100;
+    letter-spacing: 0.3px;
 }
 
 .account-right > .input-container > .icon {
