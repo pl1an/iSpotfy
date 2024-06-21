@@ -9,7 +9,7 @@ const Menu = () => {
         <h1>iSpotify</h1>
         <p>®</p>
       </div>
-      <Link to={"/artists"} className='menu-btn'>
+      <Link to={"/artists"} className='menu-btn trip-origin'>
         <span className="material-icons icon menu-icon ">trip_origin</span> Artistas
       </Link>
       <Link to={"/mainpage"} className='menu-btn queue-music'>
