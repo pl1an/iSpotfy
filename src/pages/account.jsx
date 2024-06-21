@@ -25,7 +25,33 @@ const Account = () => {
         setEmailFormVisible(false);
         localStorage.setItem('useremail', email);
     }
-}
+  }
+
+  function verificarSenha() {
+    const senhanova = document.getElementById('senhanova-input').value;
+    const senhanova2 = document.getElementById('senhanova2-input').value;
+    const senhaantiga = document.getElementById('senhaantiga-input').value;
+
+    if (senhaantiga != localStorage.getItem('userpassword')) {
+      alert("A senha está errada");
+      return;
+    }
+
+    const passwordMinLength = 6;
+    if (senhanova.length < passwordMinLength) {
+      alert(`A senha deve ter pelo menos ${passwordMinLength} caracteres.`);
+      return;
+    }
+
+    if (senhanova == senhanova2) {
+      alert("Senha válida! Redirecionando...");
+      setPasswordFormVisible(false);
+      localStorage.setItem('userpassword', senhanova);
+    } else {
+      alert(`As senhas digitadas devem ser iguais`);
+      return;
+    }
+  }
 
   return (
     <div className='account'>
@@ -63,20 +89,20 @@ const Account = () => {
             <div className='new-email'>
               <h1>Nova Senha</h1>
               <div className="input-container">
-                  <input type='password'  placeholder="Senha antiga" />
+                  <input type='password'  placeholder="Senha antiga" id='senhaantiga-input' />
                   <span className="material-icons icon">lock</span>
               </div>
               <div className="input-container">
-                  <input type='password' placeholder="Nova senha" />
+                  <input type='password' placeholder="Nova senha" id='senhanova-input'/>
                   <span className="material-icons icon">lock</span>
               </div>
               <div className="input-container">
-                  <input type='password' placeholder="Confirmar nova senha" />
+                  <input type='password' placeholder="Confirmar nova senha" id='senhanova2-input'/>
                   <span className="material-icons icon">lock</span>
               </div>
               <div className="button-container">
                 <button type='button' className='cancel-button' onClick={() => setPasswordFormVisible(false)}>Cancelar</button>
-                <button type='button' className='confirm-button'>Confirmar</button>
+                <button type='button' className='confirm-button' onClick={() => verificarSenha()}>Confirmar</button>
               </div>
             </div>
           </div>
