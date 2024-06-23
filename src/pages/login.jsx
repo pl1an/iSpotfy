@@ -28,6 +28,7 @@ export function Login(){
             password:password
         }).then(response => {
             console.log(response);
+            localStorage.setItem("userpassword", password);
             navigate('/mainpage');
         }).catch(error => {
             console.log(error),

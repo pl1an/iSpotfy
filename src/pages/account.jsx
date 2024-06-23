@@ -1,18 +1,26 @@
-import React, { useLayoutEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Menu from '../components/menu'
 import "./styles/account.css"
+import api from '../api';
 
 
 const Account = () => {
   const [isEmailFormVisible, setEmailFormVisible] = useState(false);
   const [isPasswordFormVisible, setPasswordFormVisible] = useState(false);
 
-  let emailatual;
-  let nomeatual;
+  const [emailatual, setEmailAtual] = useState('');
+  const [nomeatual, setNomeAtual] = useState('');
 
-  
-  emailatual = localStorage.getItem("useremail");
-  nomeatual = localStorage.getItem("username");
+  let userdata;
+
+  useEffect(() => {
+    api.get("/users/user").then(response => {
+      console.log(response);
+      userdata = response.data;
+      setEmailAtual(userdata.email);
+      setNomeAtual(userdata.name);
+    })
+  })
   
   function verificarEmail() {
     const email = document.getElementById('email-input').value;
@@ -21,9 +29,12 @@ const Account = () => {
     if (!emailPattern.test(email)) {
         alert("Por favor, insira um e-mail válido.");
     } else {
-        alert("E-mail válido! Redirecionando...");
-        setEmailFormVisible(false);
-        localStorage.setItem('useremail', email);
+        api.put(`/users/${userdata.id}`, {email:email}, {params:{id:userdata.id}}).then(response => {
+          setEmailFormVisible(false);
+          console.log(response);
+        }).catch(error => {
+          console.log(error);
+        })
     }
   }
 
@@ -31,9 +42,10 @@ const Account = () => {
     const senhanova = document.getElementById('senhanova-input').value;
     const senhanova2 = document.getElementById('senhanova2-input').value;
     const senhaantiga = document.getElementById('senhaantiga-input').value;
-
-    if (senhaantiga != localStorage.getItem('userpassword')) {
-      alert("A senha está errada");
+    
+    //gambiarra pq a api não retorna a senha do usuario
+    if(senhaantiga != localStorage.getItem("userpassword")){
+      alert("senha antiga incorreta.")
       return;
     }
 
@@ -44,13 +56,19 @@ const Account = () => {
     }
 
     if (senhanova == senhanova2) {
-      alert("Senha válida! Redirecionando...");
-      setPasswordFormVisible(false);
-      localStorage.setItem('userpassword', senhanova);
-    } else {
+      api.put(`/users/${userdata.id}`, {password:senhanova}, {params:{id:userdata.id}}).then(response => {
+        setPasswordFormVisible(false);
+        console.log(response);
+      }).catch(error => {
+        console.log(error);
+      })
+      localStorage.setItem("userpassword", senhanova);
+    } 
+    else{
       alert(`As senhas digitadas devem ser iguais`);
       return;
     }
+
   }
 
   return (

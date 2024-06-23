@@ -10,6 +10,7 @@ const Menu = () => {
   const logoutHandler = () => {
     api.post('/users/logout', {}).then(response => {
       console.log(response);
+      localStorage.setItem('userpassword', '');
       navigate("/");
     }).catch(error => {console.log(error)});
   }
