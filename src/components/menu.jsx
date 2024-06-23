@@ -1,8 +1,19 @@
 import React from 'react';
 import "../components/menu.css";
 import { Link } from 'react-router-dom';
+import api from '../api';
+import { useNavigate } from 'react-router-dom';
 
 const Menu = () => {
+  const navigate = useNavigate();
+
+  const logoutHandler = () => {
+    api.post('/users/logout', {}).then(response => {
+      console.log(response);
+      navigate("/");
+    }).catch(error => {console.log(error)});
+  }
+
   return (
     <div className='menu'>
       <div className='menu-title'>
@@ -22,9 +33,9 @@ const Menu = () => {
         <span className="material-icons icon menu-icon">account_circle</span> Minha Conta
       </Link>
       <div className='logout'>
-        <Link to={"/"} className='logout-btn'>
+        <button className='logout-btn' onClick={() => logoutHandler()}>
           <span className="material-icons menu-icon">logout</span> Logout
-        </Link>
+        </button>
       </div>
     </div>
   );
