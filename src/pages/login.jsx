@@ -2,6 +2,7 @@ import './styles/login.css'
 import { Link } from "react-router-dom";
 import './styles/signup.css';
 import { useNavigate } from 'react-router-dom'; 
+import api from '../api';
 
 
 export function Login(){
@@ -11,16 +12,27 @@ export function Login(){
         const email = document.getElementById('input-email').value; 
         const password = document.getElementById('input-password').value;
 
-        let useremail = localStorage.getItem('useremail');
-        let userpassword = localStorage.getItem('userpassword');
-
-        if (useremail == email && userpassword == password) {
-            navigate('/mainpage');
-        } else {
-            console.log("login inexistente");
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email)) {
+            alert("Por favor, insira um e-mail válido.");
+            return;
+        }
+        const passwordMinLength = 6;
+        if (password.length < passwordMinLength) {
+            alert(`A senha deve ter pelo menos ${passwordMinLength} caracteres.`);
+            return;
         }
 
-       
+        api.post('/users/login', {
+            email:email,
+            password:password
+        }).then(response => {
+            console.log(response);
+            navigate('/mainpage');
+        }).catch(error => {
+            console.log(error),
+            alert('senha ou email incorretos');
+        })
     }
 
     return (
@@ -39,7 +51,7 @@ export function Login(){
                     <input type='password' placeholder="Senha" id="input-password"/>
                     <span className="material-icons icon">lock</span>
                 </div>
-            <button type="submit" onClick={EntrarButton}>Entrar</button>
+            <button type="button" onClick={EntrarButton}>Entrar</button>
         </form>
         <div className="signup_link">
             <p>Não tem uma conta?</p>

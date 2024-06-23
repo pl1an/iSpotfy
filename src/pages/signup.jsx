@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import './styles/signup.css';
 import { useNavigate } from 'react-router-dom'; 
+import api from "../api";
 
 export function Signup() {
     const navigate = useNavigate();
@@ -15,18 +16,26 @@ export function Signup() {
         if (!emailPattern.test(email)) {
             alert("Por favor, insira um e-mail válido.");
             return;
-    }
+        }
 
         const passwordMinLength = 6;
         if (password.length < passwordMinLength) {
             alert(`A senha deve ter pelo menos ${passwordMinLength} caracteres.`);
             return;
-    }
-        localStorage.setItem("useremail", email);
-        localStorage.setItem("userpassword", password);
-        localStorage.setItem("username", name);
+        }
 
-        navigate('/login');
+        api.post('/users', {
+            name:name,
+            email:email,
+            password:password,
+            role:'user'
+        }).then(response => {
+            console.log(response);
+            navigate('/login');
+            alert('conta criada no iSpotfy®');
+        }).catch(error => {
+            console.log(error);
+        })
     }
    
 
@@ -49,7 +58,7 @@ export function Signup() {
                     <input placeholder="Como devemos chamar você?" id="name-input"/>
                     <span className="material-icons icon">account_circle</span>
                 </div>
-                <button type="submit" onClick={() => Cadastro()}>Cadastrar</button>
+                <button type="button" onClick={() => Cadastro()}>Cadastrar</button>
             </form>
             <div className="login_link">
                 <p>Já é um usuário do iSpotify? </p>
