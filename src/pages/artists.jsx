@@ -5,12 +5,15 @@ import ArtistContainer from '../components/artist-container'
 import api from '../api'
 
 const Artists = () => {
-  const [artists, setArtists] = useState([]);
+  const [artists1, setArtists1] = useState([]);
+  const [artists2, setArtists2] = useState([]);
 
   useEffect(() => {
-    api.get('/api/artists')
+    api.get('/artists/')
       .then(response => {
-        setArtists(response.data);
+        console.log(response.data)
+        setArtists1(response.data.slice(0, 5));
+        setArtists2(response.data.slice(6, 11));
       })
       .catch(error => {
         console.log('Erro ao buscar artistas', error);
@@ -25,7 +28,17 @@ const Artists = () => {
         <div className='artists-right'>
             <h1>Artistas</h1>
             <div className='artists-container'>
-              {artists.map((artist) => (
+              {artists1.map((artist) => (
+                <ArtistContainer
+                  key={artist.id}
+                  name={artist.name}
+                  img={artist.image}
+                  id={artist.id}
+                />
+              ))}
+            </div>
+            <div className='artists-container'>
+              {artists2.map((artist) => (
                 <ArtistContainer
                   key={artist.id}
                   name={artist.name}
