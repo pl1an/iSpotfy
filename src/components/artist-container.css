@@ -29,7 +29,8 @@
 
 }
 .img-artist {
-    width: 120px;
-    height: 120px;
+    width: 115px;
+    height: 115px;
     border-radius: 100px;
+    margin-left: 2px;
 }
