@@ -38,7 +38,7 @@ const Playlist = ({ playlistname, localname, img }) => {
         if(localStorage.getItem(localname)) {
           setSongNumber(Loadmix(localname));
       }
-      }, 100);
+      }, 150);
     })
     
     return (
