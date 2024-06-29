@@ -7,12 +7,14 @@ import api from '../api'
 function Artistmusics() {
     const { id } = useParams();
     const [img, setImg] = useState();
+    const [name, setName] =useState();
 
     useEffect(() => {
       api.get(`/artists/${id}`)
         .then(response => {
           console.log(response.data);
           setImg(response.data.image);
+          setName(response.data.name);
         })
         .catch(error => {
           console.log('Erro ao buscar artistas', error);
@@ -25,7 +27,7 @@ function Artistmusics() {
   return (
     <div>
         <Menu />
-        <Playlist playlistname={id} localname={id} img={img}/>
+        <Playlist playlistname={name} localname={name} img={img}/>
     </div>
   )
 }
