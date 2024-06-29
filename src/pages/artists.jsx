@@ -11,7 +11,6 @@ const Artists = () => {
   useEffect(() => {
     api.get('/artists/')
       .then(response => {
-        console.log(response.data)
         setArtists1(response.data.slice(0, 5));
         setArtists2(response.data.slice(6, 11));
       })
