@@ -34,9 +34,11 @@ const Playlist = ({ playlistname, localname, img }) => {
     }
     
     useEffect(() => {
+      setTimeout(() => {
         if(localStorage.getItem(localname)) {
-            setSongNumber(Loadmix(localname));
-        }
+          setSongNumber(Loadmix(localname));
+      }
+      }, 100);
     })
     
     return (

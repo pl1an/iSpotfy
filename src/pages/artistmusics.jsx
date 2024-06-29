@@ -9,7 +9,6 @@ function Artistmusics() {
     const { id } = useParams();
     const [img, setImg] = useState();
     const [name, setName] =useState ();
-    const [musics_response, setMusics_response] = useState([]);
 
 
     useEffect(() => {
@@ -28,8 +27,12 @@ function Artistmusics() {
     useEffect(() => {
       api.get(`/songs/artist/${id}`)
         .then(response => {
-          setMusics_response(response.data);
-          musicsLocalStorage();
+          let arrayMusics = [];
+          for (let i = 0; i < response.data.length;  i++){
+            let music = {name: `${response.data[i].title}`, singer: ``, album: "", fav: false, trashed: false, playlist: `${name}`};
+            arrayMusics.push(music);
+          }
+          set_storage(arrayMusics, `${id}`);
         })
         .catch(error => {
           console.log('Erro ao buscar musicas', error);
@@ -37,20 +40,11 @@ function Artistmusics() {
         });
     }, []);
 
-    function musicsLocalStorage() {
-      let arrayMusics = [];
-      for (let i = 0; i < musics_response.length;  i++){
-        let music = {name: `${musics_response[i].title}`, singer: `${name}`, album: "", fav: false, trashed: false, playlist: `${name}`};
-        arrayMusics.push(music);
-      }
-      set_storage(arrayMusics, `${name}`);
-    }
-
 
   return (
     <div>
         <Menu />
-        <Playlist playlistname={name} localname={name} img={img}/>
+        <Playlist playlistname={name} localname={id} img={img}/>
     </div>
   )
 }
