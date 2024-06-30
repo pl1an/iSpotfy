@@ -51,3 +51,16 @@ export function default_storage(){
 export function set_storage(new_storage, target_playlist){
     localStorage.setItem(target_playlist, JSON.stringify(new_storage));
 }
+
+export function set_newsong(target_mix, name, singer, album, fav, trashed){
+  const base_list = localStorage.getItem(target_mix)?JSON.parse(localStorage.getItem(target_mix)):[];
+  base_list.push({
+    name:name,
+    singer:singer,
+    album:album,
+    fav:fav,
+    trashed:trashed,
+    playlist:target_mix
+  })
+  set_storage(base_list, target_mix);
+}

@@ -29,6 +29,7 @@ export function Login(){
         }).then(response => {
             console.log(response);
             localStorage.setItem("userpassword", password);
+            localStorage.setItem("dailylogin", false);
             navigate('/mainpage');
         }).catch(error => {
             console.log(error),

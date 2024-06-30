@@ -11,6 +11,7 @@ const Menu = () => {
     api.post('/users/logout', {}).then(response => {
       console.log(response);
       localStorage.setItem('userpassword', '');
+      localStorage.removeItem('likedmusics');
       navigate("/");
     }).catch(error => {console.log(error)});
   }
